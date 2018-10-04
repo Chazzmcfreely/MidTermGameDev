@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 195759926}
   - component: {fileID: 195759921}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195759920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 3.361, z: -6.66}
+  m_LocalPosition: {x: 0.16, y: 8.215, z: -6.66}
   m_LocalScale: {x: 1, y: 2.1209462, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -290,7 +290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ff5aa49a1d04daabef774fece09bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 2
+  timer: 0
+  timerIncrease: 2
+  rotationSpeed: 3
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +303,6 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -363,25 +364,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.25399637, y: -0.0011500214, z: 0.00029695441, w: 0.9672045}
-  m_LocalPosition: {x: 0.010184661, y: 10.647718, z: -12.814042}
-  m_LocalScale: {x: 1, y: 1.85034, z: 1.2706063}
+  m_LocalPosition: {x: 0.010184661, y: 15.5017185, z: -12.814042}
+  m_LocalScale: {x: 1, y: 2.0510886, z: 1.4084581}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534669906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46afe3b39a0eb48ecb292dcdc198d763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
-  rotationSpeed: 4
 --- !u!1 &1696456382
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,5 +455,5 @@ Transform:
   m_LocalScale: {x: 4.76, y: 7, z: 2.8825998}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
