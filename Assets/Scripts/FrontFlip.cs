@@ -31,7 +31,7 @@ public class FrontFlip : MonoBehaviour
 		if (timer > 0)
 		{
 			Debug.Log(transform.eulerAngles);
-			flipRotation += new Vector3(rotationSpeed, 0f, 0f);
+			flipRotation += new Vector3(rotationSpeed, 0f, 0f) * Time.deltaTime;
 			transform.eulerAngles = flipRotation;
 			timer -= 1 * Time.deltaTime;
 			Debug.Log("Trying to flip");
