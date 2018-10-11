@@ -9,12 +9,12 @@ public class Player : MonoBehaviour
 	public float moveSpeed = 4.0f;
 	public float rotationSpeed = 4.0f;
 	private Vector3 playerPos;
-	//private HintScript HintScript;
+	private HintScript HintScript;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		//HintScript = GameObject.FindObjectOfType<HintScript>();
+		HintScript = GameObject.FindObjectOfType<HintScript>();
 	}
 	
 	// Update is called once per frame
@@ -36,6 +36,6 @@ public class Player : MonoBehaviour
 		}
 
 		playerPos = transform.position;
-		//HintScript.checkPosition(playerPos);
+		HintScript.checkPosition(playerPos);
 	}
 }
