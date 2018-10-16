@@ -15,7 +15,7 @@ public class FrontFlip : MonoBehaviour
 	{
 		timer = 0f;
 
-		flipRotation = transform.eulerAngles;
+		flipRotation = transform.localEulerAngles;
 	}
 	
 	// Update is called once per frame
@@ -32,9 +32,15 @@ public class FrontFlip : MonoBehaviour
 		{
 			Debug.Log(transform.eulerAngles);
 			flipRotation += new Vector3(rotationSpeed, 0f, 0f) * Time.deltaTime;
-			transform.eulerAngles = flipRotation;
+			transform.localEulerAngles = flipRotation;
 			timer -= 1 * Time.deltaTime;
 			Debug.Log("Trying to flip");
+			
+		}
+		else if (timer < 0)
+		{
+			transform.localEulerAngles = Vector3.zero;
+			
 		}
 		
 	}

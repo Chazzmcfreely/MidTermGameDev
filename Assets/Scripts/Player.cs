@@ -27,12 +27,12 @@ public class Player : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.A))
 		{
-			transform.eulerAngles += new Vector3(0f, -rotationSpeed, 0f);
+			transform.localEulerAngles += new Vector3(0f, -rotationSpeed, 0f);
 		}
 		
 		if (Input.GetKey(KeyCode.D))
 		{
-			transform.eulerAngles += new Vector3(0f, rotationSpeed, 0f);
+			transform.localEulerAngles += new Vector3(0f, rotationSpeed, 0f);
 		}
 
 		playerPos = transform.position;

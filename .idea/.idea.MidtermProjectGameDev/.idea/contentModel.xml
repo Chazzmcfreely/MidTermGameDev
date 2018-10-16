@@ -7,6 +7,7 @@
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
           <e p="FrontFlip.cs" t="Include" />
+          <e p="HintScript.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
       </e>
@@ -20,5 +21,6 @@
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_MidtermProjectGameDev.2095017494.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>
 </project>
