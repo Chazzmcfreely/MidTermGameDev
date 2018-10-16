@@ -88,44 +88,65 @@ public class HintScript : MonoBehaviour {
 			if (phaseNum == 0 && Vector3.Distance(playerPos, itemOne) < hintDistance)
 			{
 				phaseNum++;
-				Destroy(firstTarget);
+				firstTarget.SetActive(false);
+				secondTarget.SetActive(true);
 			}
 
 			if (phaseNum == 1 && Vector3.Distance(playerPos, itemTwo) < hintDistance)
 			{
 				phaseNum++;
+				secondTarget.SetActive(false);
+				thirdTarget.SetActive(true);
 			}
 
 			if (phaseNum == 2 && Vector3.Distance(playerPos, itemThree) < hintDistance)
 			{
 				phaseNum++;
+				thirdTarget.SetActive(false);
+				fourthTarget.SetActive(true);
 			}
 
 			if (phaseNum == 3 && Vector3.Distance(playerPos, itemFour) < hintDistance)
 			{
 				phaseNum++;
+				//fourthTarget.SetActive(false);
+				//fifthTarget.SetActive(true);
 			}
 			if (phaseNum == 4 && Vector3.Distance(playerPos, itemFour) < hintDistance && Input.GetKeyDown(KeyCode.E))
 			{
 				phaseNum++;
 				CurtainScript.Rise();
+				fourthTarget.SetActive(false);
+				fifthTarget.SetActive(true);
+			//	fifthTarget.SetActive(false);
+				//sixthTarget.SetActive(true);
 			}
 			if (phaseNum == 5 && Vector3.Distance(playerPos, itemFive) < hintDistance)
 			{
 				phaseNum++;
+				fifthTarget.SetActive(false);
+				sixthTarget.SetActive(true);
 			}
 			if (phaseNum == 6 && Vector3.Distance(playerPos, itemSix) < hintDistance)
 			{
 				phaseNum++;
+				sixthTarget.SetActive(false);
+				seventhTarget.SetActive(true);
 			}
 			if (phaseNum == 7 && Vector3.Distance(playerPos, itemSeven) < hintDistance)
 			{
 				phaseNum++;
+				seventhTarget.SetActive(false);
+				eigthTarget.SetActive(true);
 			}
 			if (phaseNum == 8 && Vector3.Distance(playerPos, itemEight) < hintDistance)
 			{
 				phaseNum++;
+				eigthTarget.SetActive(false);
+				Debug.Log("This is it champ");
 			}
+		
+			
 
 		
 	}
