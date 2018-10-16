@@ -4,9 +4,12 @@ using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HintScript : MonoBehaviour {
+public class HintScript : MonoBehaviour
+{
 
-	private string[] mySentences = new string[10];
+	private FrontFlip FrontFlip;
+	
+	private string[] mySentences = new string[11];
 	public Text hintText;
 	
 	public int phaseNum;
@@ -66,6 +69,7 @@ public class HintScript : MonoBehaviour {
 		mySentences[7] = "Follow the Choreography!";
 		mySentences[8] = "Follow the Choreography!";
 		mySentences[9] = "Press 'SPACE' to do a front flip";
+		mySentences[10] = "You did it! You Win!";
 		
 		itemOne = firstTarget.transform.position;
 		itemTwo = secondTarget.transform.position;
@@ -79,6 +83,7 @@ public class HintScript : MonoBehaviour {
 		phaseNum = 0;
 		hintDistance = 1f;
 		CurtainScript = GameObject.FindObjectOfType<CurtainScript>();
+		FrontFlip = GameObject.FindObjectOfType<FrontFlip>();
 
 
 	}
@@ -145,6 +150,17 @@ public class HintScript : MonoBehaviour {
 				eigthTarget.SetActive(false);
 				Debug.Log("This is it champ");
 			}
+
+			if (phaseNum == 9)
+			{
+			FrontFlip.enableFlip();
+				if (Input.GetKeyDown(KeyCode.Space))
+				{
+					phaseNum++;
+				}
+			}
+		
+			
 		
 			
 

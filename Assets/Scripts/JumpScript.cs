@@ -31,3 +31,5 @@ public class JumpScript : MonoBehaviour
 		}
 	}
 }
+
+/// code from here: https://answers.unity.com/questions/1207400/how-to-make-a-simple-jump-script-in-3d-c.html
