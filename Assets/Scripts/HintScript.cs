@@ -6,18 +6,35 @@ using UnityEngine.UI;
 
 public class HintScript : MonoBehaviour {
 
-	private string[] mySentences = new string[6];
+	private string[] mySentences = new string[10];
 	public Text hintText;
+	
 	public int phaseNum;
+	
 	public Vector3 itemOne;
 	public Vector3 itemTwo;
 	public Vector3 itemThree;
 	public Vector3 itemFour;
+	public Vector3 itemFive;
+	public Vector3 itemSix;
+	public Vector3 itemSeven;
+	public Vector3 itemEight;
+
+
 	public float hintDistance;
+	
 	public GameObject firstTarget;
 	public GameObject secondTarget;
 	public GameObject thirdTarget;
 	public GameObject fourthTarget;
+	public GameObject fifthTarget;
+	public GameObject sixthTarget;
+	public GameObject seventhTarget;
+	public GameObject eigthTarget;
+
+
+
+
 
 
 
@@ -44,12 +61,21 @@ public class HintScript : MonoBehaviour {
 						"\n or I live the rest of my life in regret.";
 
 		mySentences[4] = "Press 'E' to raise curtain";
-		mySentences[5] = "Thank you Kanye, very cool!";
+		mySentences[5] = "Follow the Choreography!";
+		mySentences[6] = "Follow the Choreography!";
+		mySentences[7] = "Follow the Choreography!";
+		mySentences[8] = "Follow the Choreography!";
+		mySentences[9] = "Press 'SPACE' to do a front flip";
 		
 		itemOne = firstTarget.transform.position;
 		itemTwo = secondTarget.transform.position;
 		itemThree = thirdTarget.transform.position;
 		itemFour = fourthTarget.transform.position;
+		itemFive = fifthTarget.transform.position;
+		itemSix = sixthTarget.transform.position;
+		itemSeven = seventhTarget.transform.position;
+		itemEight = eigthTarget.transform.position;
+
 		phaseNum = 0;
 		hintDistance = 1f;
 		CurtainScript = GameObject.FindObjectOfType<CurtainScript>();
@@ -83,8 +109,25 @@ public class HintScript : MonoBehaviour {
 			{
 				phaseNum++;
 				CurtainScript.Rise();
-				
 			}
+			if (phaseNum == 5 && Vector3.Distance(playerPos, itemFive) < hintDistance)
+			{
+				phaseNum++;
+			}
+			if (phaseNum == 6 && Vector3.Distance(playerPos, itemSix) < hintDistance)
+			{
+				phaseNum++;
+			}
+			if (phaseNum == 7 && Vector3.Distance(playerPos, itemSeven) < hintDistance)
+			{
+				phaseNum++;
+			}
+			if (phaseNum == 8 && Vector3.Distance(playerPos, itemEight) < hintDistance)
+			{
+				phaseNum++;
+			}
+
+		
 	}
 	
 	
