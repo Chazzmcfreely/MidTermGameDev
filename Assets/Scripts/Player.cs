@@ -34,6 +34,11 @@ public class Player : MonoBehaviour
 		{
 			transform.localEulerAngles += new Vector3(0f, rotationSpeed, 0f);
 		}
+		if (Input.GetKey(KeyCode.S))
+		{
+			transform.Translate(0f, 0f, -moveSpeed);
+		}
+
 
 		playerPos = transform.position;
 		HintScript.checkPosition(playerPos);
