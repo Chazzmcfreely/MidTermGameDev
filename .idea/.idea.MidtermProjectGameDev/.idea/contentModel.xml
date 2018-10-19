@@ -6,8 +6,10 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraFollow.cs" t="Include" />
+          <e p="CurtainScript.cs" t="Include" />
           <e p="FrontFlip.cs" t="Include" />
           <e p="HintScript.cs" t="Include" />
+          <e p="JumpScript.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
       </e>
