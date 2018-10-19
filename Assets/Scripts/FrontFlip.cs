@@ -35,6 +35,7 @@ public class FrontFlip : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				timer += timerIncrease;
+				
 
 				Debug.Log("start flip");
 			}

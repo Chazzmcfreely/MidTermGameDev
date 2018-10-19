@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class HintScript : MonoBehaviour
 {
 
+	public AudioSource myAudio;
 	private FrontFlip FrontFlip;
 	
 	private string[] mySentences = new string[11];
@@ -49,6 +50,7 @@ public class HintScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		//myAudio = GetComponent<AudioSource>();
 		mySentences[0] = "This summer was the best summer of my life hands down," +
 		                 "\n and this game is about a small yet important part of it";
 		
@@ -69,7 +71,7 @@ public class HintScript : MonoBehaviour
 		mySentences[7] = "Follow the Choreography!";
 		mySentences[8] = "Follow the Choreography!";
 		mySentences[9] = "Press 'SPACE' to do a front flip";
-		mySentences[10] = "You did it! You Win!";
+		mySentences[10] = "You did it! Way to Seize the Day!!!";
 		
 		itemOne = firstTarget.transform.position;
 		itemTwo = secondTarget.transform.position;
@@ -157,6 +159,8 @@ public class HintScript : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.Space))
 				{
 					phaseNum++;
+					myAudio.PlayOneShot(myAudio.clip);
+
 				}
 			}
 		
